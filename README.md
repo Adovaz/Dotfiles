@@ -36,6 +36,7 @@ Config files for sway wm, inspired and based on dotfiles by [@ikhsan3adi](https:
 
 - Install dependencies (should be all of them above).
 - Clone repo and copy or symlink the folders to `~.config/`
+- Set GTK style with `nwg-look`
 - Should be done!
 
 ## Keybinds
@@ -76,3 +77,4 @@ Config files for sway wm, inspired and based on dotfiles by [@ikhsan3adi](https:
 | Hibernate                              | `Ctrl+Mod+Alt+Shift+H`                  |
 | Reboot                                 | `Ctrl+Mod+Alt+Shift+R`                  |
 | Shutdown                               | `Ctrl+Mod+Alt+Shift+U`                  |
+
