@@ -1,0 +1,600 @@
+@import url("./colors.css");
+
+* {
+  border: none;
+  font-family: JetBrainsMono Nerd Font, Font Awesome, monospace;
+  font-size: 10pt;
+  min-height: 0;
+  border-radius: 0;
+}
+
+window#waybar {
+  background-color: @base;
+  border-top: 2px solid @text;
+  border-bottom: 2px solid @text;
+  color: @text;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+tooltip {
+  background-color: @base;
+  border: 2px solid @text;
+}
+
+tooltip label {
+  color: @text;
+}
+
+#workspaces {
+  margin: 0;
+  border: 0;
+}
+
+#tray {
+  margin: 0;
+  border: 0;
+}
+
+/* modules-left */
+/* .modules-left {
+  padding-left: 8px;
+}
+
+.modules-left > widget:first-child > #workspaces {
+  margin-left: 0;
+} */
+
+.modules-left > widget > * {
+  border-top: 2px solid @text;
+  border-bottom: 2px solid @text;
+}
+
+.modules-left > widget > *:hover {
+  border-top: 2px solid @accent;
+  border-bottom: 2px solid @accent;
+}
+
+/*
+.modules-left > widget:last-child > * {
+  border-right: 2px solid @text;
+}
+
+.modules-left > widget:last-child > *:hover {
+  border-right: 2px solid @accent;
+}
+
+.modules-left > widget:last-child > #workspaces button:last-child {
+  border-right: 2px solid @text;
+}
+
+.modules-left > widget:last-child > #workspaces button:last-child:hover {
+  border-right: 2px solid @accent;
+}
+
+.modules-left > widget:last-child > #workspaces button:last-child.focused {
+  border-right: 2px solid @accent;
+}
+
+.modules-left > widget:last-child > #workspaces button:last-child.urgent {
+  border-right: 2px solid @red;
+}
+
+.modules-left > widget:last-child > #tray widget:last-child {
+  border-right: 2px solid @text;
+}
+
+.modules-left > widget:last-child > #tray widget:last-child:hover {
+  border-right: 2px solid @accent;
+} */
+
+/* modules-center */
+/* .modules-center > widget > * {
+  border-top: 2px solid @text;
+  border-bottom: 2px solid @text;
+}
+
+.modules-center > widget > *:hover {
+  border-top: 2px solid @accent;
+  border-bottom: 2px solid @accent;
+}
+
+.modules-center > widget:first-child > * {
+  border-left: 2px solid @text;
+}
+
+.modules-center > widget:last-child > * {
+  border-right: 2px solid @text;
+}
+
+.modules-center > widget:first-child > *:hover {
+  border-left: 2px solid @accent;
+}
+
+.modules-center > widget:last-child > *:hover {
+  border-right: 2px solid @accent;
+} */
+
+/* modules-right */
+/* .modules-right {
+  padding-right: 8px;
+}
+
+.modules-right > widget:last-child > #workspaces {
+  margin-right: 0;
+}
+
+.modules-right > widget:first-child > * {
+  border-left: 2px solid @text;
+}
+
+.modules-right > widget:first-child > *:hover {
+  border-left: 2px solid @accent;
+}
+
+.modules-right > widget > *:hover {
+  border-top: 2px solid @accent;
+  border-bottom: 2px solid @accent;
+}
+
+.modules-right > widget:last-child > *:hover {
+  border-right: 2px solid @accent;
+} */
+
+
+/* .modules-right > widget > * { */
+/*   border-top: 2px solid @text; */
+/*   border-bottom: 2px solid @text; */
+/* } */
+/*  */
+/* .modules-right > widget:last-child > * { */
+/*   border-right: 2px solid @text; */
+/* } */
+
+#workspaces button {
+  padding: 0 4;
+  min-width: 24px;
+  background-color: @base;
+  color: @text;
+  border-top: 2px solid @text;
+  border-bottom: 2px solid @text;
+  box-shadow: inherit;
+  text-shadow: inherit;
+}
+
+#workspaces button:hover {
+  background-color: @surface0;
+  border-top: 2px solid @accent;
+  border-bottom: 2px solid @accent;
+  color: @accent;
+  font-weight: 700;
+}
+
+#workspaces button.focused {
+  background-color: @accent;
+  /* border-top: 2px solid @accent;
+  border-bottom: 2px solid @accent; */
+  color: @base;
+  font-weight: 900;
+}
+
+#workspaces button.urgent {
+  background-color: @red;
+  /* border-top: 2px solid @red;
+  border-bottom: 2px solid @red; */
+  color: @base;
+  font-weight: 700;
+}
+
+#workspaces button.focused.urgent {
+  font-weight: 900;
+  background-color: @maroon;
+  /* border-top: 2px solid @maroon;
+  border-bottom: 2px solid @maroon; */
+  color: @mantle;
+}
+
+#workspaces button:first-child {
+  border-left: 2px solid @text;
+}
+
+#workspaces button:first-child:hover {
+  border-left: 2px solid @accent;
+}
+
+#workspaces button:first-child.focused {
+  border-left: 2px solid @accent;
+}
+
+#workspaces button:first-child.urgent {
+  border-left: 2px solid @red;
+}
+
+#tray > widget {
+  border-top: 2px solid @text;
+  border-bottom: 2px solid @text;
+  background-color: @base;
+  color: @text;
+  font-weight: 700;
+}
+
+#tray > widget:hover {
+  border-top: 2px solid @accent;
+  border-bottom: 2px solid @accent;
+  background-color: @surface0;
+  color: @accent;
+  font-weight: 900;
+}
+
+#tray > widget > image {
+  padding: 0px 7px;
+}
+
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+}
+
+/* #taskbar button.active {
+  background-image: linear-gradient(0deg, @surface1, @mantle);
+} */
+
+#scratchpad {
+  background-color: @base;
+  color: @text;
+}
+
+#scratchpad:hover {
+  background-color: @surface0;
+}
+
+#scratchpad.empty {
+  background-color: transparent;
+}
+
+#mode {
+  background-color: @base;
+}
+
+#mpris {
+  background-color: @base;
+  color: @text;
+}
+
+#mpris:hover {
+  background-color: @surface0;
+  color: @accent;
+  font-weight: 900;
+}
+
+#mpris,
+#privacy,
+#custom-weather,
+#language,
+#pulseaudio,
+#bluetooth,
+#network,
+#memory,
+#cpu,
+#temperature,
+#disk,
+#battery,
+#custom-kernel,
+#idle_inhibitor,
+#scratchpad,
+#mode {
+  padding: 0px 8px;
+  margin: 0px 0px;
+  color: @text;
+  font-weight: 700;
+}
+
+#datetime {
+  background-color: @base;
+}
+
+#datetime:hover {
+  background-color: @surface0;
+}
+
+#datetime > widget > * {
+  border-top: 2px solid @text;
+  border-bottom: 2px solid @text;
+}
+
+#datetime:hover > widget > * {
+  border-top: 2px solid @accent;
+  border-bottom: 2px solid @accent;
+}
+
+#datetime > widget > #clock {
+  padding: 0px 4px;
+  margin: 0px 0px;
+}
+
+#datetime > widget:first-child > #clock {
+  padding-left: 8px;
+  color: @subtext1;
+  font-weight: 700;
+}
+
+#datetime > widget:last-child > #clock {
+  padding-right: 8px;
+  color: @accent;
+  font-weight: 900;
+}
+
+#datetime > widget > #clock:hover {
+  color: @accent;
+  font-weight: 900;
+}
+
+#quick-settings > widget > * {
+  border-top: 2px solid @text;
+  border-bottom: 2px solid @text;
+}
+
+#quick-settings > widget > *:hover {
+  /* border-top: 2px solid @accent;
+  border-bottom: 2px solid @accent; */
+}
+
+#hardware {
+  background-color: @accent;
+}
+
+#custom-weather {
+  background-color: @base;
+  color: @text;
+}
+
+#custom-weather.cold {
+  background-color: @base;
+  color: @blue;
+}
+
+#custom-weather.cool {
+  background-color: @base;
+  color: @sapphire;
+}
+
+#custom-weather.normal {
+  background-color: @base;
+  color: @text;
+}
+
+#custom-weather.warm {
+  background-color: @base;
+  color: @yellow;
+}
+
+#custom-weather.hot {
+  background-color: @base;
+  color: @red;
+}
+
+#custom-weather:hover {
+  background-color: @surface0;
+  font-weight: 900;
+  color: @text;
+  border-top: 2px solid @text;
+  border-bottom: 2px solid @text;
+}
+
+#custom-kernel {
+  background-color: @base;
+  color: @text;
+}
+
+#custom-kernel:hover {
+  background-color: @surface0;
+  font-weight: 900;
+  color: @accent;
+  border-top: 2px solid @accent;
+  border-bottom: 2px solid @accent;
+}
+
+#cpu {
+  color: @base;
+  min-width: 42px;
+}
+
+#cpu.normal {
+  color: @base;
+}
+
+#cpu.warning {
+  background-color: @yellow;
+}
+
+#cpu.critical {
+  background-color: @red;
+  font-weight: 900;
+}
+
+#cpu:hover {
+  color: @mantle;
+  font-weight: 900;
+}
+
+#memory {
+  color: @base;
+  min-width: 42px;
+}
+
+#memory.normal {
+  color: @base;
+}
+
+#memory.warning {
+  background-color: @yellow;
+}
+
+#memory.critical {
+  background-color: @red;
+  font-weight: 900;
+}
+
+#memory:hover {
+  color: @mantle;
+  font-weight: 900;
+}
+
+#disk {
+  color: @base;
+}
+
+#disk:hover {
+  color: @mantle;
+  font-weight: 900;
+}
+
+#bluetooth,
+#bluetooth.off {
+  background-color: @base;
+  color: @red;
+}
+
+#bluetooth.on {
+  background-color: @base;
+  color: @green;
+}
+
+#bluetooth.connected {
+  background-color: @base;
+  color: @blue;
+}
+
+#bluetooth.no-controller,
+#bluetooth.disabled {
+  background-color: @base;
+  color: @red;
+}
+
+#bluetooth:hover {
+  background-color: @surface0;
+  color: @blue;
+  font-weight: 900;
+  border-top: 2px solid @blue;
+  border-bottom: 2px solid @blue;
+}
+
+#network {
+  background-color: @base;
+  color: @sapphire;
+}
+
+#network.disabled {
+  background-color: @base;
+  color: @red;
+}
+
+#network.disconnected {
+  background-color: @base;
+  color: @red;
+}
+
+#network:hover {
+  background-color: @surface0;
+  color: @sapphire;
+  font-weight: 900;
+  border-top: 2px solid @sapphire;
+  border-bottom: 2px solid @sapphire;
+}
+
+#pulseaudio {
+  background-color: @base;
+  color: @mauve;
+}
+
+#pulseaudio.warning {
+  background-color: @base;
+  color: @yellow;
+}
+
+#pulseaudio.critical {
+  background-color: @base;
+  color: @red;
+}
+
+#pulseaudio.muted {
+  background-color: @base;
+  color: @red;
+}
+
+#pulseaudio:hover {
+  background-color: @surface0;
+  color: @mauve;
+  font-weight: 900;
+  border-top: 2px solid @mauve;
+  border-bottom: 2px solid @mauve;
+}
+
+#temperature {
+  color: @base;
+}
+
+#temperature.critical {
+  background-color: @red;
+}
+
+#temperature:hover {
+  color: @mantle;
+  font-weight: 900;
+}
+
+#battery {
+  color: @base;
+}
+
+#battery.full {
+  font-weight: 900;
+}
+
+#battery.charging {
+  font-weight: 900;
+}
+
+#battery.warning {
+  background-color: @yellow;
+}
+
+#battery.critical {
+  background-color: @red;
+  font-weight: 900;
+}
+
+#battery:hover {
+  color: @mantle;
+  font-weight: 900;
+}
+
+#privacy {
+  border-top: 2px solid @text;
+  border-bottom: 2px solid @text;
+  background-color: @base;
+  color: @text;
+}
+
+#idle_inhibitor {
+  background-color: @base;
+  color: @text;
+}
+
+#idle_inhibitor:hover {
+  background-color: @surface0;
+  font-weight: 900;
+  color: @accent;
+}
+
+#idle_inhibitor.activated {
+  background-color: @accent;
+  border-top: 2px solid @accent;
+  border-bottom: 2px solid @accent;
+  color: @base;
+}

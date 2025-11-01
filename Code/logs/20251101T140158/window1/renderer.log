@@ -1,0 +1,8 @@
+2025-11-01 14:01:59.515 [info] Started local extension host with pid 25814.
+2025-11-01 14:02:00.066 [error] Extension 'ms-vsliveshare.vsliveshare' wants API proposal 'notebookCellExecutionState' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-11-01 14:02:01.303 [info] MCP Registry configured: https://api.mcp.github.com/2025-09-15
+2025-11-01 14:02:02.184 [info] Settings Sync: Account status changed from uninitialized to available
+2025-11-01 14:02:02.269 [info] [perf] Render performance baseline is 60ms
+2025-11-01 14:02:18.378 [error] [Extension Host] (node:25814) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `exe --trace-deprecation ...` to show where the warning was created)
+2025-11-01 14:06:39.619 [warning] [backup tracker] suspended, ignoring unregister event file:///home/avery/Downloads/Untitled.md 
