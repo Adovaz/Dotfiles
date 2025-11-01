@@ -1,6 +1,11 @@
 # Adovaz's sway dotfiles
 
 Config files for sway wm, inspired and based on dotfiles by [@ikhsan3adi](https://codeberg.org/ikhsan3adi) (mine are kinda fucked up).
+
+## Preview
+
+![Screenshot](/1761970088_grim.png)
+
 ## Dependencies
 
 |                     | App/Program/Utilities Used                                                                                                                                                                                                                                                                      |
@@ -30,7 +35,7 @@ Config files for sway wm, inspired and based on dotfiles by [@ikhsan3adi](https:
 | Color Palette       | [Catppuccin Macchiato](https://catppuccin.com/palette/)                                                                                                                                                                                                                                         |
 | Other               | [`wl-clipboard`](https://github.com/bugaevc/wl-clipboard), [`rfkill-input-handler-disable`](https://github.com/devkev/rfkill-input-handler-disable), [`overskride`](https://github.com/kaii-lb/overskride), [`imv`](https://sr.ht/~exec64/imv/), [`xarchiver`](https://github.com/ib/xarchiver) |
 
-`yay -Syu sway rofi swaylock-effects autotiling waybar networkmanager light pipewire mako grim slurp kitty fish hyfetch nwg-look wl-clipboard rfkill overskride imv xarchiver catppuccin-gtk-theme-macchiato firefox thunar papirus-icon-theme nerd-fonts woff2-font-awesome code` This should work 🙏🙏
+`yay -Syu sway rofi swaylock-effects autotiling waybar networkmanager light pipewire mako grim slurp kitty fish hyfetch fastfetch nwg-look wl-clipboard rfkill overskride imv xarchiver catppuccin-gtk-theme-macchiato firefox thunar papirus-icon-theme nerd-fonts woff2-font-awesome visual-studio-code-bin` This should work 🙏🙏
 
 ## Installation
 
