@@ -2,6 +2,12 @@
 
 include ~/.config/sway/colors
 
+### Language
+
+input * {
+	xkb_layout "mao"
+}
+
 ### Variables
 
 set $mod Mod4
@@ -39,7 +45,7 @@ set $brightnessupS light -A 2.00 && light -O
 set $volumemuteS pactl set-sink-mute \@DEFAULT_SINK@ toggle
 set $volumedownS pactl set-sink-volume \@DEFAULT_SINK@ -2%
 set $volumeupS pactl set-sink-volume \@DEFAULT_SINK@ +2%
-set $micmuteS pactl set-source-mute \@DEFAULT_SOURCE@ toggle
+set $micmuteS ~/.config/sway/togglemic.sh
 
 set $togglewifiS ~/.config/waybar/togglewifi.sh
 
