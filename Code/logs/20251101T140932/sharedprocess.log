@@ -1,9 +1,0 @@
-2025-11-01 14:10:11.932 [info] Uninstalling extension from the profile: shd101wyy.markdown-preview-enhanced@0.8.19 vscode-userdata:/home/avery/.vscode/extensions/extensions.json
-2025-11-01 14:10:11.974 [info] Marked extension as removed shd101wyy.markdown-preview-enhanced-0.8.19
-2025-11-01 14:10:17.380 [info] Successfully uninstalled extension from the profile shd101wyy.markdown-preview-enhanced@0.8.19 vscode-userdata:/home/avery/.vscode/extensions/extensions.json
-2025-11-01 14:10:19.918 [info] Getting Manifest... bierner.markdown-preview-github-styles
-2025-11-01 14:10:19.978 [info] Installing extension: bierner.markdown-preview-github-styles {"isMachineScoped":false,"installPreReleaseVersion":false,"pinned":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/avery/.vscode/extensions/extensions.json","path":"/home/avery/.vscode/extensions/extensions.json","scheme":"vscode-userdata"},"isApplicationScoped":false,"productVersion":{"version":"1.105.1","date":"2025-10-14T22:33:36.618Z"}}
-2025-11-01 14:10:21.087 [info] Extension signature verification result for bierner.markdown-preview-github-styles: Success. Internal Code: 0. Executed: true. Duration: 501ms.
-2025-11-01 14:10:21.111 [info] Extracted extension to file:///home/avery/.vscode/extensions/bierner.markdown-preview-github-styles-2.2.0: bierner.markdown-preview-github-styles
-2025-11-01 14:10:21.123 [info] Renamed to /home/avery/.vscode/extensions/bierner.markdown-preview-github-styles-2.2.0
-2025-11-01 14:10:21.144 [info] Extension installed successfully: bierner.markdown-preview-github-styles vscode-userdata:/home/avery/.vscode/extensions/extensions.json

@@ -1,6 +1,0 @@
-2025-11-01 14:03:20.032 [info] Getting Manifest... shd101wyy.markdown-preview-enhanced
-2025-11-01 14:03:26.332 [info] Installing extension: shd101wyy.markdown-preview-enhanced {"isMachineScoped":false,"installPreReleaseVersion":false,"pinned":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/avery/.vscode/extensions/extensions.json","path":"/home/avery/.vscode/extensions/extensions.json","scheme":"vscode-userdata"},"isApplicationScoped":false,"productVersion":{"version":"1.105.1","date":"2025-10-14T22:33:36.618Z"}}
-2025-11-01 14:03:41.629 [info] Extension signature verification result for shd101wyy.markdown-preview-enhanced: Success. Internal Code: 0. Executed: true. Duration: 515ms.
-2025-11-01 14:03:41.905 [info] Extracted extension to file:///home/avery/.vscode/extensions/shd101wyy.markdown-preview-enhanced-0.8.19: shd101wyy.markdown-preview-enhanced
-2025-11-01 14:03:41.930 [info] Renamed to /home/avery/.vscode/extensions/shd101wyy.markdown-preview-enhanced-0.8.19
-2025-11-01 14:03:41.960 [info] Extension installed successfully: shd101wyy.markdown-preview-enhanced vscode-userdata:/home/avery/.vscode/extensions/extensions.json

@@ -40,9 +40,9 @@ Config files for sway wm, inspired and based on dotfiles by [@ikhsan3adi](https:
 ## Installation
 
 - Install dependencies (should be all of them above).
-- Clone repo and copy or symlink the folders to `~.config/`
+- Clone repo and copy or symlink the folders and `hyfetch.json` to `~.config/`
 - Set GTK style with `nwg-look`
-- Add user to `video` group fo allow `light` to work
+- Add user to `video` group to allow `light` to work
 - Should be done!
 
 ## Keybinds

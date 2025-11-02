@@ -1,5 +1,0 @@
-2025-11-01 11:29:06.992 [info] Started local extension host with pid 22218.
-2025-11-01 11:29:07.405 [error] Extension 'ms-vsliveshare.vsliveshare' wants API proposal 'notebookCellExecutionState' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
-2025-11-01 11:29:08.982 [info] MCP Registry configured: https://api.mcp.github.com/2025-09-15
-2025-11-01 11:29:09.422 [info] Settings Sync: Account status changed from uninitialized to available
-2025-11-01 11:29:09.708 [info] [perf] Render performance baseline is 39ms
