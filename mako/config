@@ -18,20 +18,17 @@ layer=overlay
 
 anchor=bottom-right
 
-[urgency=low]
+background-color=#24273a
 text-color=#cad3f5
 border-color=#8aadf4
-background-color=#24273a
+progress-color=over #363a4f
+
+[urgency=low]
 default-timeout=15000
 
 [urgency=normal]
-text-color=#cad3f5
-border-color=#8aadf4
-background-color=#24273a
 default-timeout=30000
 
 [urgency=high]
-text-color=#cad3f5
 border-color=#ed8796
-background-color=#24273a
 default-timeout=0

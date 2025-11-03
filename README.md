@@ -1,6 +1,6 @@
 # Adovaz's sway dotfiles
 
-Config files for sway wm, inspired and based on dotfiles by [@ikhsan3adi](https://codeberg.org/ikhsan3adi) (mine are kinda fucked up).
+Config files for sway wm using the [catppuccin](https://catppuccin.com/) macchiato color scheme, inspired and based on dotfiles by [@ikhsan3adi](https://codeberg.org/ikhsan3adi)  (mine are kinda fucked up).
 
 ## Preview
 
