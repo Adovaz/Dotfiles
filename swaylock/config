@@ -32,3 +32,4 @@ datestr=%a, %d %b %Y
 clock
 indicator-idle-visible
 indicator-radius=180
+font=JetBrainsMono Nerd Font Propo

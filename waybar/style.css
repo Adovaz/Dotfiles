@@ -10,8 +10,7 @@
 
 window#waybar {
   background-color: @base;
-  border-top: 2px solid @text;
-  border-bottom: 2px solid @text;
+  border: 2px solid @text;
   color: @text;
 }
 
@@ -281,7 +280,7 @@ tooltip label {
 #idle_inhibitor,
 #scratchpad,
 #mode {
-  padding: 0px 8px;
+  padding: 0px 6px;
   margin: 0px 0px;
   color: @text;
   font-weight: 700;
@@ -331,10 +330,10 @@ tooltip label {
   border-bottom: 2px solid @text;
 }
 
-#quick-settings > widget > *:hover {
-  /* border-top: 2px solid @accent;
-  border-bottom: 2px solid @accent; */
-}
+/* #quick-settings > widget > *:hover {
+border-top: 2px solid @accent;
+  border-bottom: 2px solid @accent;
+} */
 
 #hardware {
   border-top: 2px solid @text;
@@ -546,7 +545,7 @@ tooltip label {
 
 #power-profiles-daemon {
   color: @green;
-  padding: 0px 8px;
+  padding: 0px 6px;
   font-weight: 900
 }
 

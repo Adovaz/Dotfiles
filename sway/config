@@ -14,10 +14,10 @@ set $mod Mod4
 set $alt Mod1
 set $ctrl ctrl
 
-#set $left h
-#set $down j
-# set $up k
-# set $right l
+set $left h
+set $down j
+set $up k
+set $right l
 
 # terminal emulator
 set $term kitty
@@ -233,7 +233,7 @@ bindsym XF86SelectiveScreenshot exec $screenshotS -gS
 bindsym $ctrl+$mod+c exec $colorpickerS
 
 # lock screen
-bindsym $ctrl+$mod+$alt+l exec $lockS
+bindsym $ctrl+$mod+$alt+l exec $lockSs
 
 # sleep
 bindsym $ctrl+$mod+$alt+s exec systemctl sleep
