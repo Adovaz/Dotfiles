@@ -1,6 +1,6 @@
 window#osd {
   border-radius: 0px;
-  border: 2px solid #8aadf4;
+  border: 2px solid #cad3f5;
   background: #24273a ;
 }
 
@@ -21,6 +21,7 @@ window#osd {
 
   progressbar {
     min-height: 6px;
+    border-radius: 0px;
     background: transparent;
     border: none;
   }
