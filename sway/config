@@ -32,6 +32,7 @@ set $filemgr thunar
 # scripts
 set $lockS swaylock
 set $screenshotS ~/.config/sway/screenshot.sh
+set $colorpickerS exec wl-color-picker
 
 set $drunS ~/.config/sway/menu.sh drun
 set $runS ~/.config/sway/menu.sh run
@@ -222,8 +223,12 @@ bindsym --locked XF86RFKill exec $togglewifiS
 bindsym Print exec $screenshotS
 bindsym $mod+Print exec $screenshotS -g
 
+# color picker
+bindsym $ctrl+$mod+c exec $colorpickerS
+
 # lock screen
 bindsym $ctrl+$mod+$alt+l exec $lockS
+
 # sleep
 bindsym $ctrl+$mod+$alt+s exec systemctl sleep
 # hibernate
