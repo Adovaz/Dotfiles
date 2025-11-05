@@ -148,9 +148,9 @@ tooltip label {
 /*   border-bottom: 2px solid @text; */
 /* } */
 /*  */
-/* .modules-right > widget:last-child > * { */
-/*   border-right: 2px solid @text; */
-/* } */
+/* .modules-right > widget:last-child > * {
+  padding-right: 0px
+} */
 
 #workspaces button {
   padding: 0 4px;
@@ -505,11 +505,11 @@ tooltip label {
 }
 
 #temperature {
-  color: @base;
+  color: @green;
 }
 
 #temperature.critical {
-  background-color: @red;
+  color: @red;
 }
 
 #temperature:hover {
@@ -538,7 +538,19 @@ tooltip label {
   font-weight: 900;
 }
 
+
 #battery:hover {
+  background-color: @surface0;
+  font-weight: 900;
+}
+
+#power-profiles-daemon {
+  color: @green;
+  padding: 0px 8px;
+  font-weight: 900
+}
+
+#power-profiles-daemon:hover {
   background-color: @surface0;
   font-weight: 900;
 }

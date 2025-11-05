@@ -1,309 +1,295 @@
 {
-    "layer": "top",
-    "position": "top",
-    "height": 35,
-    "spacing": 0,
-    "margin": "8 8 8 8",
-    "reload_style_on_change": true,
-    "modules-left": [
-        "sway/workspaces",
-        "idle_inhibitor",
-        "privacy",
-        "sway/mode",
-        "sway/scratchpad",
-        "tray",
-        "mpris"
-    ],
-    "modules-center": [
-        "group/datetime"
-    ],
-    "modules-right": [
-        "group/quick-settings",
-        "group/hardware"
-    ],
-    "group/datetime": {
-        "orientation": "inherit",
-        "modules": [
-            "clock#date",
-            "clock#time"
-        ]
-    },
-    "group/quick-settings": {
-        "orientation": "inherit",
-        "modules": [
-            // "custom/kernel",
-            "network",
-            "bluetooth",
-            "pulseaudio"
-            // , "custom/weather"
-        ]
-    },
-    "group/hardware": {
-        "orientation": "inherit",
-        "modules": [
-            // "disk#ssd",
-            // "temperature",
-            "cpu",
-            "memory",
-            "battery"
-        ]
-    },
-    "sway/workspaces": {
-        "disable-scroll": true,
-        "all-outputs": true,
-        "warp-on-scroll": false,
-        "format": "{icon}",
-        "format-icons": {
-            "1": "I",
-            "2": "II",
-            "3": "III",
-            "4": "IV",
-            "5": "V",
-            "6": "VI",
-            "7": "VII",
-            "8": "VIII",
-            "9": "IX",
-            "10": "X"
-        }
-    },
-    "privacy": {
-        "icon-spacing": 12,
-        "icon-size": 16,
-        "modules": [
-            {
-                "type": "screenshare",
-                "tooltip": true
-            },
-            {
-                "type": "audio-out",
-                "tooltip": true
-            },
-            {
-                "type": "audio-in",
-                "tooltip": true
-            }
-        ]
-    },
-    "bluetooth": {
-        "format-on": "BT On {icon}",
-        "format-off": "BT Off {icon}",
-        "format-disabled": "BT Off {icon}",
-        "format-connected": "BT On ({num_connections}) {icon}",
-        "format-no-controller": "N/A {icon}",
-        "format-icons": {
-            "on": "",
-            "off": "",
-            "disabled": "",
-            "connected": "",
-            "no-controller": ""
-        },
-        "tooltip-format": "{icon} {controller_alias}\t{controller_address}",
-        "tooltip-format-on": "{icon} {controller_alias}\t{controller_address}\n\n{num_connections} connected",
-        "tooltip-format-disabled": "Controller Disabled",
-        "tooltip-format-connected": "{icon} {controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
-        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
-        "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t[{device_battery_percentage}%]",
-        "tooltip-format-no-controller": "No Controller or Service disabled",
-        "on-click-right": "exec overskride",
-        "on-click": "exec ~/.config/waybar/togglebt.sh"
-    },
-    "sway/mode": {
-        "format": "<span style=\"italic\">{}</span>"
-    },
-    "mpris": {
-        "interval": 1,
-        "format": "{player_icon} [{length}] {dynamic}",
-        "format-playing": "{player_icon} [{position}/{length}] {dynamic}",
-        "format-paused": "{status_icon} [{position}/{length}] <i>{dynamic}</i>",
-        "format-stopped": "{status_icon} [{length}] <i>{dynamic}</i>",
-        "dynamic-order": [
-            "artist",
-            "title"
-        ],
-        "player-icons": {
-            "default": "⏸",
-            "firefox": "⏸",
-            "tidal-hifi": "🎵",
-            "cmus": "🎵"
-        },
-        "status-icons": {
-            "paused": "▶",
-            "stopped": "⏹"
-        },
-        "dynamic-len": 64
-        // "ignored-players": ["cmus"]
-    },
-    "tray": {
-        "icon-size": 16,
-        "spacing": 0
-    },
-    "clock#date": {
-        "interval": 3600,
-        "timezone": "Pacific/Auckland",
-        "format": "{:%a, %d %b %Y}",
-        "tooltip-format": "<tt><small>{calendar}</small></tt>",
-        "calendar": {
-            "mode": "year",
-            "mode-mon-col": 3,
-            "weeks-pos": "right",
-            "on-scroll": 1,
-            "format": {
-                "months": "<span color='#ca9ee6'><b>{}</b></span>",
-                "days": "<span color='#c6d0f5'><b>{}</b></span>",
-                "weeks": "<span color='#81c8be'>W{}</span>",
-                "weekdays": "<span color='#e5c890'><b>{}</b></span>",
-                "today": "<span color='#f2d5cf'><b><u>{}</u></b></span>"
-            }
-        },
-        "actions": {
-            "on-click": "mode",
-            "on-click-forward": "tz_up",
-            "on-click-backward": "tz_down",
-            "on-scroll-up": "shift_up",
-            "on-scroll-down": "shift_down"
-        }
-    },
-    "clock#time": {
-        "interval": 1,
-        "timezone": "Pacific/Auckland",
-        "format": "{:%H:%M:%S}",
-        "tooltip-format": "{:%Ec}"
-    },
-    "cpu": {
-        "interval": 3,
-        "format": "{usage}%  ",
-        "on-click": "kitty btop",
-        "states": {
-            "normal": 40,
-            "warning": 60,
-            "critical": 80
-        }
-    },
-    "memory": {
-        "interval": 3,
-        "format": "{}%  ",
-        "on-click": "kitty btop",
-        "tooltip-format": "Used: {used:0.1f}G/{total:0.1f}G. Swap: {swapUsed:0.1f}G/{swapTotal:0.1f}G",
-        "states": {
-            "normal": 20,
-            "warning": 50,
-            "critical": 80
-        }
-    },
-    "network": {
-        "interval": 2,
-        "interface-ethernet": "enp1s*",
-        "interface-wifi": "wlp2s*",
-        "format-disabled": "Wi-Fi Off {icon}",
-        "format-disconnected": "Disconnected {icon}",
-        "format-ethernet": "▲ {bandwidthUpBytes} ▼ {bandwidthDownBytes} {icon} ETH",
-        "format-wifi": "▲ {bandwidthUpBytes} ▼ {bandwidthDownBytes} {icon} {essid}",
-        "format-linked": "▲ {bandwidthUpBytes} ▼ {bandwidthDownBytes} {icon} (No IP)",
-        "format-icons": {
-            "disabled": " ",
-            "disconnected": " ",
-            "ethernet": "󰈀 ",
-            "wifi": " ",
-            "linked": "󰄡 "
-        },
-        "tooltip-format": "{icon} {ifname}\t{ipaddr}/{cidr}",
-        "tooltip-format-disabled": "Wi-Fi Off",
-        "tooltip-format-disconnected": "{icon} Wi-Fi Disconnected\nSearching for networks...",
-        "tooltip-format-wifi": "{icon} {ifname}\t{ipaddr}/{cidr} [{signalStrength}%]",
-        "on-click": "exec ~/.config/waybar/togglewifi.sh",
-        "on-click-right": "kitty nmtui-connect",
-        "max-length": 36
-    },
-    "custom/weather": {
-        "interval": 300,
-        "exec": "~/.config/waybar/wttr.sh",
-        "return-type": "json",
-        "format": "{}",
-        "tooltip": true
-    },
-    "pulseaudio": {
-        "scroll-step": 1,
-        "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon}  {format_source}",
-        "format-bluetooth-muted": "   {format_source}",
-        "format-muted": "  {format_source}",
-        "format-source": "{volume}%  ",
-        "format-source-muted": "  ",
-        "format-icons": {
-            "headphone": " ",
-            "hands-free": " ",
-            "headset": " ",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": [
-                " ",
-                " "
-            ]
-        },
-        "tooltip": true,
-        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-        "on-click-middle": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
-        "on-click-right": ""
-    },
-    "battery": {
-        "bat": "BAT0",
-        "interval": 30,
-        "states": {
-            "warning": 50,
-            "critical": 20
-        },
-        "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ⭍",
-        "format-full": "{capacity}% {icon}",
-        "format-icons": [
-            " ",
-            " ",
-            " ",
-            " ",
-            " "
-        ],
-        "tooltip-format": "{timeTo}\n{power}"
-    },
-    "temperature": {
-        "interval": 3,
-        "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
-        "critical-threshold": 90,
-        "format-critical": "{temperatureC}°C {icon}",
-        "format": "{temperatureC}°C {icon}",
-        "format-icons": [
-            "",
-            "",
-            ""
-        ]
-    },
-    "disk#ssd": {
-        "interval": 60,
-        "format": "{path} {free} ",
-        "path": "/",
-        "tooltip": true,
-        "warning": 80,
-        "critical": 90
-    },
-    "sway/scratchpad": {
-        "format": "{icon} {count}",
-        "show-empty": false,
-        "format-icons": [
-            "",
-            ""
-        ],
-        "tooltip": true,
-        "tooltip-format": "{app}: {title}"
-    },
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": " ",
-            "deactivated": " "
-        }
-    },
-    "custom/kernel": {
-        "exec": "uname -r | sed -E 's/^([0-9]+\\.[0-9]+\\.[0-9]+)-.*-([a-zA-Z0-9]+)/\\1-\\2/'",
-        "format": "{} "
+  "layer": "top",
+  "position": "top",
+  "height": 35,
+  "spacing": 0,
+  "margin": "8 8 8 8",
+  "reload_style_on_change": true,
+  "modules-left": [
+    "sway/workspaces",
+    "idle_inhibitor",
+    "privacy",
+    "sway/mode",
+    "sway/scratchpad",
+    "tray",
+    "mpris"
+  ],
+  "modules-center": ["group/datetime"],
+  "modules-right": ["group/quick-settings", "group/hardware"],
+  "group/datetime": {
+    "orientation": "inherit",
+    "modules": ["clock#date", "clock#time"]
+  },
+  "group/quick-settings": {
+    "orientation": "inherit",
+    "modules": [
+      // "custom/kernel",
+      "network",
+      "bluetooth",
+      "pulseaudio"
+      // , "custom/weather"
+    ]
+  },
+  "group/hardware": {
+    "orientation": "inherit",
+    "modules": [
+      // "disk#ssd",
+      "temperature",
+      "cpu",
+      "memory",
+      "battery",
+      "power-profiles-daemon"
+    ]
+  },
+  "sway/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "warp-on-scroll": false,
+    "format": "{icon}",
+    "format-icons": {
+      "1": "I",
+      "2": "II",
+      "3": "III",
+      "4": "IV",
+      "5": "V",
+      "6": "VI",
+      "7": "VII",
+      "8": "VIII",
+      "9": "IX",
+      "10": "X"
     }
+  },
+  "privacy": {
+    "icon-spacing": 12,
+    "icon-size": 16,
+    "modules": [
+      {
+        "type": "screenshare",
+        "tooltip": true
+      },
+      {
+        "type": "audio-out",
+        "tooltip": true
+      },
+      {
+        "type": "audio-in",
+        "tooltip": true
+      }
+    ]
+  },
+  "bluetooth": {
+    "format-on": "BT On {icon}",
+    "format-off": "BT Off {icon}",
+    "format-disabled": "BT Off {icon}",
+    "format-connected": "BT On ({num_connections}) {icon}",
+    "format-no-controller": "N/A {icon}",
+    "format-icons": {
+      "on": "",
+      "off": "",
+      "disabled": "",
+      "connected": "",
+      "no-controller": ""
+    },
+    "tooltip-format": "{icon} {controller_alias}\t{controller_address}",
+    "tooltip-format-on": "{icon} {controller_alias}\t{controller_address}\n\n{num_connections} connected",
+    "tooltip-format-disabled": "Controller Disabled",
+    "tooltip-format-connected": "{icon} {controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+    "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t[{device_battery_percentage}%]",
+    "tooltip-format-no-controller": "No Controller or Service disabled",
+    "on-click-right": "exec overskride",
+    "on-click": "exec ~/.config/waybar/togglebt.sh"
+  },
+  "sway/mode": {
+    "format": "<span style=\"italic\">{}</span>"
+  },
+  "mpris": {
+    "interval": 1,
+    "format": "{player_icon} [{length}] {dynamic}",
+    "format-playing": "{player_icon} [{position}/{length}] {dynamic}",
+    "format-paused": "{status_icon} [{position}/{length}] <i>{dynamic}</i>",
+    "format-stopped": "{status_icon} [{length}] <i>{dynamic}</i>",
+    "dynamic-order": ["artist", "title"],
+    "player-icons": {
+      "default": "⏸",
+      "firefox": "",
+      "spotify": "",
+      "tidal-hifi": "",
+      "cmus": ""
+    },
+    "status-icons": {
+      "paused": "▶",
+      "stopped": "⏹"
+    },
+    "dynamic-len": 64
+    // "ignored-players": ["cmus"]
+  },
+  "tray": {
+    "icon-size": 16,
+    "spacing": 0
+  },
+  "clock#date": {
+    "interval": 3600,
+    "timezone": "Pacific/Auckland",
+    "format": "{:%a, %d %b %Y}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode": "year",
+      "mode-mon-col": 3,
+      "weeks-pos": "right",
+      "on-scroll": 1,
+      "format": {
+        "months": "<span color='#ca9ee6'><b>{}</b></span>",
+        "days": "<span color='#c6d0f5'><b>{}</b></span>",
+        "weeks": "<span color='#81c8be'>W{}</span>",
+        "weekdays": "<span color='#e5c890'><b>{}</b></span>",
+        "today": "<span color='#f2d5cf'><b><u>{}</u></b></span>"
+      }
+    },
+    "actions": {
+      "on-click": "mode",
+      "on-click-forward": "tz_up",
+      "on-click-backward": "tz_down",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down"
+    }
+  },
+  "clock#time": {
+    "interval": 1,
+    "timezone": "Pacific/Auckland",
+    "format": "{:%H:%M:%S}",
+    "tooltip-format": "{:%Ec}"
+  },
+  "cpu": {
+    "interval": 3,
+    "format": "{usage}%  ",
+    "on-click": "kitty btop",
+    "states": {
+      "normal": 40,
+      "warning": 60,
+      "critical": 80
+    }
+  },
+  "memory": {
+    "interval": 3,
+    "format": "{}%  ",
+    "on-click": "kitty btop",
+    "tooltip-format": "Used: {used:0.1f}G/{total:0.1f}G. Swap: {swapUsed:0.1f}G/{swapTotal:0.1f}G",
+    "states": {
+      "normal": 20,
+      "warning": 50,
+      "critical": 80
+    }
+  },
+  "network": {
+    "interval": 2,
+    "interface-ethernet": "enp1s*",
+    "interface-wifi": "wlp2s*",
+    "format-disabled": "Wi-Fi Off {icon}",
+    "format-disconnected": "Disconnected {icon}",
+    "format-ethernet": "▲ {bandwidthUpBytes} ▼ {bandwidthDownBytes} {icon} ETH",
+    "format-wifi": "▲ {bandwidthUpBytes} ▼ {bandwidthDownBytes} {icon} {essid}",
+    "format-linked": "▲ {bandwidthUpBytes} ▼ {bandwidthDownBytes} {icon} (No IP)",
+    "format-icons": {
+      "disabled": " ",
+      "disconnected": " ",
+      "ethernet": "󰈀 ",
+      "wifi": " ",
+      "linked": "󰄡 "
+    },
+    "tooltip-format": "{icon} {ifname}\t{ipaddr}/{cidr}",
+    "tooltip-format-disabled": "Wi-Fi Off",
+    "tooltip-format-disconnected": "{icon} Wi-Fi Disconnected\nSearching for networks...",
+    "tooltip-format-wifi": "{icon} {ifname}\t{ipaddr}/{cidr} [{signalStrength}%]",
+    "on-click": "exec ~/.config/waybar/togglewifi.sh",
+    "on-click-right": "kitty nmtui-connect",
+    "max-length": 36
+  },
+  "custom/weather": {
+    "interval": 300,
+    "exec": "~/.config/waybar/wttr.sh",
+    "return-type": "json",
+    "format": "{}",
+    "tooltip": true
+  },
+  "pulseaudio": {
+    "scroll-step": 1,
+    "format": "{volume}% {icon} {format_source}",
+    "format-bluetooth": "{volume}% {icon}  {format_source}",
+    "format-bluetooth-muted": "   {format_source}",
+    "format-muted": "  {format_source}",
+    "format-source": "{volume}%  ",
+    "format-source-muted": "  ",
+    "format-icons": {
+      "headphone": " ",
+      "hands-free": "󰺙",
+      "headset": " ",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": [" ", " "]
+    },
+    "tooltip": true,
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "on-click-middle": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+    "on-click-right": ""
+  },
+  "battery": {
+    "bat": "BAT0",
+    "interval": 30,
+    "states": {
+      "warning": 50,
+      "critical": 20
+    },
+    "format": "{capacity}% {icon}",
+    "format-charging": "{capacity}% ⭍",
+    "format-full": "{capacity}% {icon}",
+    "format-icons": [" ", " ", " ", " ", " "],
+    "tooltip-format": "{timeTo}\n{power}"
+  },
+  "power-profiles-daemon": {
+    "format": "{icon}",
+    "tooltip-format": "Power profile: {profile}",
+    "tooltip": true,
+    "format-icons": {
+      "default": " ",
+      "performance": " ",
+      "balanced": " ",
+      "power-saver": " "
+    }
+  },
+  "temperature": {
+    "interval": 3,
+    "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
+    "critical-threshold": 90,
+    "format-critical": "{temperatureC}°C {icon}",
+    "format": "{temperatureC}°C {icon}",
+    "format-icons": ["", "", ""]
+  },
+  "disk#ssd": {
+    "interval": 60,
+    "format": "{path} {free} ",
+    "path": "/",
+    "tooltip": true,
+    "warning": 80,
+    "critical": 90
+  },
+  "sway/scratchpad": {
+    "format": "{icon} {count}",
+    "show-empty": false,
+    "format-icons": ["", ""],
+    "tooltip": true,
+    "tooltip-format": "{app}: {title}"
+  },
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": " ",
+      "deactivated": " "
+    }
+  },
+  "custom/kernel": {
+    "exec": "uname -r | sed -E 's/^([0-9]+\\.[0-9]+\\.[0-9]+)-.*-([a-zA-Z0-9]+)/\\1-\\2/'",
+    "format": "{} "
+  }
 }
