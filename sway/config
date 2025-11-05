@@ -20,7 +20,7 @@ set $up k
 set $right l
 
 # terminal emulator
-set $term0 kitty
+set $term kitty
 # VSCodium
 set $codium code
 # browser
@@ -39,12 +39,20 @@ set $runS ~/.config/sway/menu.sh run
 set $waybarS waybar -c ~/.config/waybar/config.jsonc -s ~/.config/waybar/style.css
 set $makoS mako -c ~/.config/mako/config
 
-set $brightnessdownS light -U 2.00 && light -O
-set $brightnessupS light -A 2.00 && light -O
+# set $brightnessdownS light -U 2.00 && light -O 
+# set $brightnessupS light -A 2.00 && light -O 
 
-set $volumemuteS pactl set-sink-mute \@DEFAULT_SINK@ toggle
-set $volumedownS pactl set-sink-volume \@DEFAULT_SINK@ -2%
-set $volumeupS pactl set-sink-volume \@DEFAULT_SINK@ +2%
+set $brightnessdownS exec swayosd-client --brightness lower
+set $brightnessupS exec swayosd-client --brightness raise
+
+# set $volumemuteS pactl set-sink-mute \@DEFAULT_SINK@ toggle 
+# set $volumedownS pactl set-sink-volume \@DEFAULT_SINK@ -2%
+# set $volumeupS pactl set-sink-volume \@DEFAULT_SINK@ +2% 
+# set $micmuteS ~/.config/sway/togglemic.sh 
+
+set $volumemuteS exec swayosd-client --output-volume mute-toggle
+set $volumedownS exec swayosd-client --output-volume lower
+set $volumeupS exec swayosd-client --output-volume raise
 set $micmuteS ~/.config/sway/togglemic.sh
 
 set $togglewifiS ~/.config/waybar/togglewifi.sh
@@ -66,6 +74,9 @@ exec $waybarS
 # notification
 exec $makoS
 
+#OSD
+exec swayosd-server
+
 # autotiling
 exec_always autotiling
 
@@ -75,13 +86,13 @@ output eDP-1 pos 0 1080
 
 # idle
 exec swayidle -w \
-        timeout 180 'light -O && light -S 0.00' resume 'light -I' \
-        timeout 600 "exec $lockS -f" \
-        timeout 900 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-        before-sleep "exec $lockS -f"
+        timeout 300 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+        timeout 600 'systemctl sleep' \
+        before-sleep '$lockS -f'
 
 # touchpad
-input "type:touchpad" {
+input "type:touchpad"
+{
     dwt enabled
     tap enabled
     natural_scroll enabled
@@ -91,7 +102,7 @@ input "type:touchpad" {
 ### keybindings
 
 # launch apps
-bindsym $mod+Return exec $term0
+bindsym $mod+Return exec $term
 bindsym $mod+d exec $drunS
 bindsym $mod+Shift+d exec $runS
 bindsym $mod+Shift+v exec $codium
