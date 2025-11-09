@@ -222,16 +222,16 @@
     "format-source-muted": "  ",
     "format-icons": {
       "headphone": " ",
-      "hands-free": "󰺙",
+      "hands-free": "󰺙 ",
       "headset": " ",
-      "phone": "",
-      "portable": "",
-      "car": "",
+      "phone": " ",
+      "portable": " ",
+      "car": " ",
       "default": [" ", " "]
     },
     "tooltip": true,
-    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-    "on-click-middle": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+    "on-click": "swayosd-client --output-volume mute-toggle",
+    "on-click-middle": "~/.config/sway/togglemic.sh",
     "on-click-right": ""
   },
   "battery": {

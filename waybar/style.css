@@ -141,7 +141,6 @@ tooltip label {
   border-right: 2px solid @accent;
 } */
 
-
 /* .modules-right > widget > * { */
 /*   border-top: 2px solid @text; */
 /*   border-bottom: 2px solid @text; */
@@ -199,12 +198,16 @@ tooltip label {
   border-left: 2px solid @text;
 }
 
+#workspaces button:first-child.focused.urgent{
+  border-left: 2px solid @text;
+}
+
 /* #workspaces button:first-child:hover {
   border-left: 2px solid @accent;
 } */
 
 #workspaces button:first-child.urgent {
-  border-left: 2px solid @red;
+  border-left: 2px solid @text;
 }
 
 #tray > widget {
@@ -221,7 +224,7 @@ tooltip label {
 }
 
 #tray > widget > image {
-  padding: 0px 7px;
+  padding: 0px 6px;
 }
 
 #tray > .passive {
@@ -408,6 +411,7 @@ border-top: 2px solid @accent;
 
 #cpu:hover {
   font-weight: 900;
+  background-color: @surface0;
 }
 
 #memory {
@@ -537,7 +541,6 @@ border-top: 2px solid @accent;
   font-weight: 900;
 }
 
-
 #battery:hover {
   background-color: @surface0;
   font-weight: 900;
@@ -546,7 +549,7 @@ border-top: 2px solid @accent;
 #power-profiles-daemon {
   color: @green;
   padding: 0px 6px;
-  font-weight: 900
+  font-weight: 900;
 }
 
 #power-profiles-daemon:hover {
@@ -570,4 +573,3 @@ border-top: 2px solid @accent;
   background-color: @surface0;
   font-weight: 900;
 }
-
