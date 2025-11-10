@@ -34,14 +34,15 @@ Config files for sway wm using the [catppuccin](https://catppuccin.com/) macchia
 | Cursor              | [Adwaita](https://github.com/manu-mannattil/adwaita-cursors)                                                                                                                                                                                                                  |
 | Font                | [JetBrainsMono Nerd Font](https://www.nerdfonts.com/font-downloads), [Font Awesome](https://archlinux.org/packages/extra/any/otf-font-awesome/)                                                                                                                               |
 | Color Palette       | [Catppuccin Macchiato](https://catppuccin.com/palette/)                                                                                                                                                                                                                       |
-| Other               | [`wl-clipboard`](https://github.com/bugaevc/wl-clipboard), [`overskride`](https://github.com/kaii-lb/overskride), [`imv`](https://sr.ht/~exec64/imv/), [`xarchiver`](https://github.com/ib/xarchiver)                                                                         |
+| Other               | [`wl-clipboard`](https://github.com/bugaevc/wl-clipboard), [`overskride`](https://github.com/kaii-lb/overskride), [`imv`](https://sr.ht/~exec64/imv/), [`xarchiver`](https://github.com/ib/xarchiver), [`lxpolkit-git`](https://github.com/lxqt/lxqt-policykit)               |
 
-`yay -Syu sway rofi swaylock-effects autotiling waybar networkmanager light pipewire mako grim slurp kitty fish hyfetch fastfetch nwg-look wl-clipboard rfkill overskride imv xarchiver catppuccin-gtk-theme-macchiato firefox thunar papirus-icon-theme nerd-fonts woff2-font-awesome visual-studio-code-bin swayosd wl-color-picker micro` This should work 🙏🙏
+`yay -Syu sway rofi swaylock-effects autotiling waybar networkmanager light pipewire mako grim slurp kitty fish hyfetch fastfetch nwg-look wl-clipboard rfkill overskride imv xarchiver catppuccin-gtk-theme-macchiato firefox thunar papirus-icon-theme nerd-fonts woff2-font-awesome visual-studio-code-bin swayosd wl-color-picker micro lxpolkit-git power-profiles-daemon` This should work 🙏🙏
 
 ## Installation
 
 - Install dependencies (should be all of them above).
 - Clone repo and copy or symlink the folders and `hyfetch.json` to `~.config/`
+- Install Oh-My-Fish
 - Set GTK style with `nwg-look`
 - Add user to `video` group to allow `light` to work
 - Should be done!
@@ -85,4 +86,3 @@ Config files for sway wm using the [catppuccin](https://catppuccin.com/) macchia
 | Hibernate                              | `Ctrl+Mod+Alt+Shift+H`                  |
 | Reboot                                 | `Ctrl+Mod+Alt+Shift+R`                  |
 | Shutdown                               | `Ctrl+Mod+Alt+Shift+U`                  |
-

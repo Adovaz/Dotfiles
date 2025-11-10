@@ -62,9 +62,6 @@ set $togglewifiS ~/.config/waybar/togglewifi.sh
 # font
 font pango:JetBrainsMono Nerd Font Propo Bold 10
 
-# scaling
-exec $scaleS
-
 # wallpaper
 output * bg ~/Pictures/wallpaper.png fill
 
@@ -80,8 +77,15 @@ exec swayosd-server
 # autotiling
 exec_always autotiling
 
+# syncthing
+exec syncthing serve
+
+# polkit
+exec lxpolkit
+
 # displays
 output DP-2 pos 0 0
+output DP-1 pos 0 0
 output eDP-1 pos 0 1080
 
 # idle
