@@ -34,9 +34,9 @@ Config files for sway wm using the [catppuccin](https://catppuccin.com/) macchia
 | Cursor              | [Adwaita](https://github.com/manu-mannattil/adwaita-cursors)                                                                                                                                                                                                                  |
 | Font                | [JetBrainsMono Nerd Font](https://www.nerdfonts.com/font-downloads), [Font Awesome](https://archlinux.org/packages/extra/any/otf-font-awesome/)                                                                                                                               |
 | Color Palette       | [Catppuccin Macchiato](https://catppuccin.com/palette/)                                                                                                                                                                                                                       |
-| Other               | [`wl-clipboard`](https://github.com/bugaevc/wl-clipboard), [`overskride`](https://github.com/kaii-lb/overskride), [`imv`](https://sr.ht/~exec64/imv/), [`xarchiver`](https://github.com/ib/xarchiver), [`lxpolkit-git`](https://github.com/lxqt/lxqt-policykit)               |
+| Other               | [`wl-clipboard`](https://github.com/bugaevc/wl-clipboard), [`overskride`](https://github.com/kaii-lb/overskride), [`imv`](https://sr.ht/~exec64/imv/), [`xarchiver`](https://github.com/ib/xarchiver), [`xfcepolkit`](https://github.com/ncopa/xfce-polkit)               |
 
-`yay -Syu sway rofi swaylock-effects autotiling waybar networkmanager light pipewire mako grim slurp kitty fish hyfetch fastfetch nwg-look wl-clipboard rfkill overskride imv xarchiver catppuccin-gtk-theme-macchiato firefox thunar papirus-icon-theme nerd-fonts woff2-font-awesome visual-studio-code-bin swayosd wl-color-picker micro lxpolkit-git power-profiles-daemon` This should work 🙏🙏
+`yay -Syu sway rofi swaylock-effects autotiling waybar networkmanager light pipewire mako grim slurp kitty fish hyfetch fastfetch nwg-look wl-clipboard rfkill overskride imv xarchiver catppuccin-gtk-theme-macchiato firefox thunar papirus-icon-theme nerd-fonts woff2-font-awesome visual-studio-code-bin swayosd wl-color-picker micro xfce-polkit power-profiles-daemon` This should work 🙏🙏
 
 ## Installation
 

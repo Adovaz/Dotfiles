@@ -77,11 +77,8 @@ exec swayosd-server
 # autotiling
 exec_always autotiling
 
-# syncthing
-exec syncthing serve
-
 # polkit
-exec lxpolkit
+exec /usr/lib/xfce-polkit/xfce-polkit
 
 # displays
 output DP-2 pos 0 0
