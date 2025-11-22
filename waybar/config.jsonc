@@ -6,6 +6,7 @@
   "margin": "8 8 8 8",
   "reload_style_on_change": true,
   "modules-left": [
+    "custom/archicon",
     "sway/workspaces",
     "idle_inhibitor",
     "privacy",
@@ -40,6 +41,11 @@
       "battery",
       "power-profiles-daemon"
     ]
+  },
+  "custom/archicon": {
+    "format": " ",
+    "on-click": "~/.config/rofi/launchers/pmenu.sh",
+    "tooltip": false
   },
   "sway/workspaces": {
     "disable-scroll": true,

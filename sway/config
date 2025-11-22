@@ -35,6 +35,7 @@ set $colorpickerS exec wl-color-picker
 
 set $drunS ~/.config/sway/menu.sh drun
 set $runS ~/.config/sway/menu.sh run
+set $pmenuS ~/.config/rofi/launchers/pmenu.sh
 
 set $waybarS waybar -c ~/.config/waybar/config.jsonc -s ~/.config/waybar/style.css
 set $makoS mako -c ~/.config/mako/config
@@ -66,7 +67,7 @@ font pango:JetBrainsMono Nerd Font Propo Bold 10
 output * bg ~/Pictures/wallpaper.png fill
 
 # waybar
-exec $waybarS
+exec_always $waybarS
 
 # notification
 exec $makoS
@@ -234,7 +235,10 @@ bindsym XF86SelectiveScreenshot exec $screenshotS -gS
 bindsym $ctrl+$mod+c exec $colorpickerS
 
 # lock screen
-bindsym $ctrl+$mod+$alt+l exec $lockSs
+bindsym $ctrl+$mod+$alt+l exec $lockS
+
+#power menu
+bindsym $ctrl+$alt+Delete exec $pmenuS
 
 # sleep
 bindsym $ctrl+$mod+$alt+s exec systemctl sleep
