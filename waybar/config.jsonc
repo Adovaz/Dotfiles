@@ -103,7 +103,7 @@
     "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
     "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t[{device_battery_percentage}%]",
     "tooltip-format-no-controller": "No Controller or Service disabled",
-    "on-click-right": "exec overskride",
+    "on-click-right": "kitty bluetui",
     "on-click": "exec ~/.config/waybar/togglebt.sh"
   },
   "sway/mode": {
@@ -208,7 +208,7 @@
     "tooltip-format-disconnected": "{icon} Wi-Fi Disconnected\nSearching for networks...",
     "tooltip-format-wifi": "{icon} {ifname}\t{ipaddr}/{cidr} [{signalStrength}%]",
     "on-click": "exec ~/.config/waybar/togglewifi.sh",
-    "on-click-right": "kitty nmtui-connect",
+    "on-click-right": "kitty wifitui",
     "max-length": 36
   },
   "custom/weather": {
@@ -237,8 +237,8 @@
     },
     "tooltip": true,
     "on-click": "swayosd-client --output-volume mute-toggle",
-    "on-click-middle": "~/.config/sway/togglemic.sh",
-    "on-click-right": ""
+    "on-click-middle": "swayosd --input-volume mute-toggle",
+    "on-click-right": "kitty wiremix"
   },
   "battery": {
     "bat": "BAT0",

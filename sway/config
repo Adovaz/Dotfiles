@@ -53,7 +53,7 @@ set $brightnessupS exec swayosd-client --brightness raise
 
 set $volumemuteS exec swayosd-client --output-volume mute-toggle
 set $volumedownS exec swayosd-client --output-volume lower
-set $volumeupS exec swayosd-client --output-volume raise
+set $volumeupS exec swayosd-client --output-volume raise  
 set $micmuteS ~/.config/sway/togglemic.sh
 
 set $togglewifiS ~/.config/waybar/togglewifi.sh
@@ -64,7 +64,8 @@ set $togglewifiS ~/.config/waybar/togglewifi.sh
 font pango:JetBrainsMono Nerd Font Propo Bold 10
 
 # wallpaper
-output * bg ~/Pictures/wallpaper.png fill
+# output * bg ~/Pictures/Wallpapers/849827.jpg fill
+ output * bg ~/Pictures/Wallpapers/wallpaper.png fill
 
 # waybar
 exec_always $waybarS
