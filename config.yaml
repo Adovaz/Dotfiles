@@ -8,4 +8,63 @@ config:
   link_on_import: nolink
   longkey: false
 dotfiles:
+  d_fastfetch:
+    src: config/fastfetch
+    dst: ~/.config/fastfetch
+  d_fish:
+    src: config/fish
+    dst: ~/.config/fish
+  d_kitty:
+    src: config/kitty
+    dst: ~/.config/kitty
+  d_mako:
+    src: config/mako
+    dst: ~/.config/mako
+  d_micro:
+    src: config/micro
+    dst: ~/.config/micro
+  d_omf:
+    src: config/omf
+    dst: ~/.config/omf
+  d_rofi:
+    src: config/rofi
+    dst: ~/.config/rofi
+  d_sway:
+    src: config/sway
+    dst: ~/.config/sway
+  d_swaylock:
+    src: config/swaylock
+    dst: ~/.config/swaylock
+  d_swayosd:
+    src: config/swayosd
+    dst: ~/.config/swayosd
+  d_thunar:
+    src: config/Thunar
+    dst: ~/.config/Thunar
+    chmod: '700'
+  d_waybar:
+    src: config/waybar
+    dst: ~/.config/waybar
+  d_xfce4:
+    src: config/xfce4
+    dst: ~/.config/xfce4
+  f_hyfetch.json:
+    src: config/hyfetch.json
+    dst: ~/.config/hyfetch.json
 profiles:
+  foxbook:
+    dotfiles:
+    - d_fastfetch
+    - d_fish
+    - d_kitty
+    - d_mako
+    - d_micro
+    - d_omf
+    - d_rofi
+    - d_sway
+    - d_swaylock
+    - d_swayosd
+    - d_thunar
+    - d_waybar
+    - d_xfce4
+    - f_hyfetch.json

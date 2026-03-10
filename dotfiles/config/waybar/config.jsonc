@@ -237,7 +237,7 @@
     },
     "tooltip": true,
     "on-click": "swayosd-client --output-volume mute-toggle",
-    "on-click-middle": "swayosd --input-volume mute-toggle",
+    "on-click-middle": "swayosd-client --input-volume mute-toggle",
     "on-click-right": "kitty wiremix"
   },
   "battery": {
