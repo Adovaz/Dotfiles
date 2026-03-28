@@ -68,3 +68,19 @@ profiles:
     - d_waybar
     - d_xfce4
     - f_hyfetch.json
+  foxtop:
+    dotfiles:
+    - d_fastfetch
+    - d_fish
+    - d_kitty
+    - d_mako
+    - d_micro
+    - d_omf
+    - d_rofi
+    - d_sway
+    - d_swaylock
+    - d_swayosd
+    - d_thunar
+    - d_waybar
+    - d_xfce4
+    - f_hyfetch.json
