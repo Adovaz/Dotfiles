@@ -36,7 +36,7 @@ Config files for sway wm using the [catppuccin](https://catppuccin.com/) macchia
 | Color Palette       | [Catppuccin Macchiato](https://catppuccin.com/palette/)                                                                                                                                                                                                                       |
 | Other               | [`wl-clipboard`](https://github.com/bugaevc/wl-clipboard), [`overskride`](https://github.com/kaii-lb/overskride), [`imv`](https://sr.ht/~exec64/imv/), [`xarchiver`](https://github.com/ib/xarchiver), [`xfcepolkit`](https://github.com/ncopa/xfce-polkit)                   |
 
-`yay -Syu sway rofi swaylock-effects autotiling waybar networkmanager wifitui light pipewire mako grim slurp kitty fish hyfetch fastfetch nwg-look wl-clipboard rfkill bluetui imv xarchiver catppuccin-gtk-theme-macchiato firefox thunar papirus-icon-theme nerd-fonts woff2-font-awesome visual-studio-code-bin swayosd wl-color-picker micro xfce-polkit power-profiles-daemon rofi-power-menu dotdrop` This should work 🙏🙏
+`yay -Syu sway rofi swaylock-effects autotiling waybar networkmanager wifitui light pipewire mako grim slurp kitty fish hyfetch fastfetch nwg-look wl-clipboard rfkill bluetui imv xarchiver catppuccin-gtk-theme-macchiato firefox thunar papirus-icon-theme nerd-fonts woff2-font-awesome visual-studio-code-bin swayosd wl-color-picker micro xfce-polkit power-profiles-daemon rofi-power-menu dotdrop kanshi swaybg wiremix pipewire-jack pipewire-pulse pipewire-alsa pipewire wireplumber` This should work 🙏🙏
 
 ## Installation
 

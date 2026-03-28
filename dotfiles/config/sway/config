@@ -68,7 +68,7 @@ font pango:JetBrainsMono Nerd Font Propo Bold 10
  output * bg ~/Pictures/Wallpapers/wallpaper.png fill
 
 # waybar
-exec_always $waybarS
+exec $waybarS
 
 # notification
 exec $makoS
@@ -83,9 +83,7 @@ exec_always autotiling
 exec /usr/lib/xfce-polkit/xfce-polkit
 
 # displays
-output DP-2 pos 0 0
-output DP-1 pos 0 0
-output eDP-1 pos 0 1080
+exec kanshi
 
 # idle
 exec swayidle -w \

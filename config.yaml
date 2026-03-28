@@ -41,7 +41,7 @@ dotfiles:
   d_thunar:
     src: config/Thunar
     dst: ~/.config/Thunar
-    chmod: '700'
+    chmod: '755'
   d_waybar:
     src: config/waybar
     dst: ~/.config/waybar
@@ -51,6 +51,9 @@ dotfiles:
   f_hyfetch.json:
     src: config/hyfetch.json
     dst: ~/.config/hyfetch.json
+  d_kanshi:
+    src: config/kanshi
+    dst: ~/.config/kanshi
 profiles:
   foxbook:
     dotfiles:
@@ -68,6 +71,7 @@ profiles:
     - d_waybar
     - d_xfce4
     - f_hyfetch.json
+    - d_kanshi
   foxtop:
     dotfiles:
     - d_fastfetch
@@ -84,3 +88,4 @@ profiles:
     - d_waybar
     - d_xfce4
     - f_hyfetch.json
+    - d_kanshi
