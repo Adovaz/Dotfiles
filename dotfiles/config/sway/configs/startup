@@ -1,0 +1,26 @@
+# startup
+
+# waybar
+exec $waybarS
+exec 'pkill -USR2 waybar'
+
+# notification
+exec $makoS
+
+#OSD
+exec swayosd-server
+
+# autotiling
+exec_always autotiling
+
+# polkit
+exec /usr/lib/xfce-polkit/xfce-polkit
+
+# displays
+exec kanshi
+
+# idle
+exec swayidle -w \
+        timeout 300 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+        timeout 600 'systemctl sleep' \
+        before-sleep '$lockS -f'

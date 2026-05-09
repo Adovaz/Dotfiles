@@ -1,0 +1,7 @@
+### output
+
+# font
+font pango:JetBrainsMono Nerd Font Propo Bold 10
+
+# background
+output * bg ~/Pictures/Wallpapers/wallpaper.png fill

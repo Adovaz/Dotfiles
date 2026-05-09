@@ -54,6 +54,9 @@ dotfiles:
   d_kanshi:
     src: config/kanshi
     dst: ~/.config/kanshi
+  d_hypr:
+    src: config/hypr
+    dst: ~/.config/hypr
 profiles:
   foxbook:
     dotfiles:
@@ -72,6 +75,7 @@ profiles:
     - d_xfce4
     - f_hyfetch.json
     - d_kanshi
+    - d_hypr
   foxtop:
     dotfiles:
     - d_fastfetch

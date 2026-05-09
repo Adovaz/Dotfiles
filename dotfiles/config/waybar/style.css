@@ -76,6 +76,14 @@ tooltip label {
   font-weight: 900;
 }
 
+#workspaces button.active {
+  background-color: @accent;
+  /* border-top: 2px solid @accent;
+  border-bottom: 2px solid @accent; */
+  color: @base;
+  font-weight: 900;
+}
+
 #workspaces button.urgent {
   background-color: @red;
   /* border-top: 2px solid @red;
