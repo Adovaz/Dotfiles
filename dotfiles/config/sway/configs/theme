@@ -47,4 +47,4 @@ gaps top -8
 # specific apps window settings
 for_window [app_id="imv"] floating enable
 for_window [app_id="xfce-pokit"] floating enable
-for_window [app_id="zenityz"] floating enable
+for_window [app_id="zenity"] floating enable

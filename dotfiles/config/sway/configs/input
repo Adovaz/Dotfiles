@@ -14,3 +14,6 @@ input "type:touchpad"
     natural_scroll enabled
     middle_emulation enabled
 }
+
+bindgesture swipe:right workspace prev
+bindgesture swipe:left workspace next

@@ -2,12 +2,14 @@
 
 # waybar
 exec $waybarS
-exec 'pkill -USR2 waybar'
 
 # notification
 exec $makoS
 
-#OSD
+# restore saved brightness
+exec light -I
+
+# swayOSD
 exec swayosd-server
 
 # autotiling

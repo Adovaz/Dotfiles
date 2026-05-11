@@ -93,3 +93,4 @@ profiles:
     - d_xfce4
     - f_hyfetch.json
     - d_kanshi
+    - d_hypr

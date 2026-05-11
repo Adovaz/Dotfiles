@@ -101,8 +101,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# restore saved brightness
-exec light -I
+
 
 # adjust brightness via light
 bindsym --locked XF86MonBrightnessDown exec $brightnessdownS
@@ -126,7 +125,7 @@ bindsym --release Caps_Lock exec swayosd-client --caps-lock
 # screenshot with grim
 bindsym Print exec $screenshotS
 bindsym $mod+Print exec $screenshotS -g
-bindsym XF86SelectiveScreenshot exec $screenshotS -gS
+bindsym XF86SelectiveScreenshot exec $screenshotS -g
 
 # color picker
 bindsym $ctrl+$mod+c exec $colorpickerS
