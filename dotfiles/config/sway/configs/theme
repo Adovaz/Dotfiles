@@ -59,3 +59,4 @@ gaps top -8
 for_window [app_id="imv"] floating enable
 for_window [app_id="xfce-polkit"] floating enable
 for_window [app_id="zenity"] floating enable
+for_window [app_id="WebExtension"] floating enable

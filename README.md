@@ -1,10 +1,10 @@
-# Adovaz's sway dotfiles
+# Adovaz's Sway (and Hyprland ig) dotfiles
 
-Config files for sway wm using the [catppuccin](https://catppuccin.com/) macchiato color scheme, inspired and based on dotfiles by [@ikhsan3adi](https://codeberg.org/ikhsan3adi)  (mine are kinda fucked up).
+Config files for Sway WM (Hyprland too) using the [catppuccin](https://catppuccin.com/) macchiato color scheme, inspired and based on dotfiles by [@ikhsan3adi](https://codeberg.org/ikhsan3adi)  (mine are kinda fucked up).
 
 ## Preview
 
-![Screenshot](/1761970088_grim.png)
+![Screenshot](/screenshot.png)
 
 ## Dependencies
 
@@ -12,7 +12,7 @@ Config files for sway wm using the [catppuccin](https://catppuccin.com/) macchia
 | :------------------ | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Window Manager      | [`sway`](https://swaywm.org/)                                                                                                                                                                                                                                                 |
 | Launcher            | [`rofi-wayland`](https://github.com/lbonn/rofi) \w [`rofi-power-menu`](https://github.com/jluttine/rofi-power-menu)                                                                                                                                                           |
-| Lockscreen          | [`swaylock-effects`](https://github.com/mortie/swaylock-effects)                                                                                                                                                                                                              |
+| Lockscreen          | [`swaylock](https://github.com/swaywm/swaylock)                                                                                                                                                                                                              |
 | Status Bar          | [`waybar`](https://github.com/Alexays/Waybar)                                                                                                                                                                                                                                 |
 | Network             | [`networkmanager`](https://archlinux.org/packages/?name=networkmanager), [`wifitui`](https://github.com/shazow/wifitui)                                                                                                                                                                                                       |
 | Brightness          | [`light`](https://gitlab.com/dpeukert/light), [`swayosd`](https://github.com/ErikReider/SwayOSD)                                                                                                                                                                              |
@@ -34,13 +34,13 @@ Config files for sway wm using the [catppuccin](https://catppuccin.com/) macchia
 | Cursor              | [Adwaita](https://github.com/manu-mannattil/adwaita-cursors)                                                                                                                                                                                                                  |
 | Font                | [JetBrainsMono Nerd Font](https://www.nerdfonts.com/font-downloads), [Font Awesome](https://archlinux.org/packages/extra/any/otf-font-awesome/)                                                                                                                               |
 | Color Palette       | [Catppuccin Macchiato](https://catppuccin.com/palette/)                                                                                                                                                                                                                       |
-| Other               | [`wl-clipboard`](https://github.com/bugaevc/wl-clipboard), [`overskride`](https://github.com/kaii-lb/overskride), [`imv`](https://sr.ht/~exec64/imv/), [`xarchiver`](https://github.com/ib/xarchiver), [`xfcepolkit`](https://github.com/ncopa/xfce-polkit)                   |
+| Other               | [`wl-clipboard`](https://github.com/bugaevc/wl-clipboard), [`blue-tui`](https://github.com/pythops/bluetui), [`imv`](https://sr.ht/~exec64/imv/), [`xarchiver`](https://github.com/ib/xarchiver), [`xfcepolkit`](https://github.com/ncopa/xfce-polkit)                   |
 
-`yay -Syu sway rofi swaylock-effects autotiling waybar networkmanager wifitui light pipewire mako grim slurp kitty fish hyfetch fastfetch nwg-look wl-clipboard rfkill bluetui imv xarchiver catppuccin-gtk-theme-macchiato firefox thunar papirus-icon-theme nerd-fonts woff2-font-awesome visual-studio-code-bin swayosd wl-color-picker micro xfce-polkit power-profiles-daemon rofi-power-menu dotdrop kanshi swaybg wiremix pipewire-jack pipewire-pulse pipewire-alsa pipewire wireplumber` This should work 🙏🙏
+`yay -Syu sway rofi swaylock-effects autotiling waybar networkmanager wifitui light pipewire mako grim slurp kitty fish hyfetch fastfetch nwg-look wl-clipboard rfkill bluetui imv xarchiver catppuccin-gtk-theme-macchiato firefox thunar papirus-icon-theme nerd-fonts woff2-font-awesome visual-studio-code-bin swayosd wl-color-picker micro xfce-polkit power-profiles-daemon rofi-power-menu dotdrop kanshi swaybg wiremix pipewire-jack pipewire-pulse pipewire-alsa pipewire wireplumber hyprland hyprpaper hypridle hyprlock` This should work (I might have forgotten some, I'm sure youll figure it out)
 
 ## Installation
 
-- Install dependencies (should be all of them above).
+- Install dependencies.
 - Clone the repo and `dotdrop install`.
 - Install Oh-My-Fish
 - Set GTK style with `nwg-look`

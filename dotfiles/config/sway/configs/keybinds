@@ -55,9 +55,9 @@ bindsym --release Caps_Lock exec swayosd-client --caps-lock
 ### Misc ###
 
 # Screenshot with grim
-bindsym Print exec $screenshotS
-bindsym $mod+Print exec $screenshotS -g
-bindsym XF86SelectiveScreenshot exec $screenshotS -g
+bindsym Print exec $screenshot
+bindsym $mod+Print exec $screenshot -g
+bindsym XF86SelectiveScreenshot exec $screenshots -g
 
 # Color picker
 bindsym ctrl+$mod+c exec $colorpickerS
