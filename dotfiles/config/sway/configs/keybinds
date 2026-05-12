@@ -1,24 +1,84 @@
-### keybinding
+################
+### KEYBINDS ###
+################
+set $mod Mod4
+set $alt Mod1
 
-# launch apps
+set $left h
+set $down j
+set $up k
+set $right l
+
+
+### Launch applications ###
+
+# Basics
 bindsym $mod+Return exec $term
-bindsym $mod+d exec $drunS
-bindsym $mod+Shift+d exec $runS
-bindsym $mod+Shift+v exec $codium
+bindsym $mod+Shift+v exec $code
 bindsym $mod+Shift+b exec $browser
 bindsym $mod+Shift+e exec $filemgr
 
-# sway
+# Rofi
+bindsym $mod+d exec $drun
+bindsym $mod+Shift+d exec $run
+
+
+### Power
+bindsym ctrl+$alt+Delete exec $pmenu
+bindsym ctrl+$mod+$alt+s exec systemctl sleep
+bindsym ctrl+$mod+$alt+Shift+h exec systemctl hibernate
+bindsym ctrl+$mod+$alt+Shift+r exec reboot
+bindsym ctrl+$mod+$alt+Shift+u exec poweroff
+
+### Special Keys ###
+
+# Adjust brightness via light
+bindsym --locked XF86MonBrightnessDown exec $brightnessdown
+bindsym --locked XF86MonBrightnessUp exec $brightnessup
+
+# Adjust volume via PulseAudio
+bindsym --locked XF86AudioMute exec $volumemute
+bindsym --locked XF86AudioLowerVolume exec $volumedown
+bindsym --locked XF86AudioRaiseVolume exec $volumeup
+bindsym --locked XF86AudioMicMute exec $micmute
+
+# Toggle wifi
+bindsym --locked XF86RFKill exec $togglewifi
+
+# Toggle touchpad
+bindsym XF86TouchpadToggle input type:touchpad events toggle enabled disabled
+
+# Capslock 
+bindsym --release Caps_Lock exec swayosd-client --caps-lock
+
+
+### Misc ###
+
+# Screenshot with grim
+bindsym Print exec $screenshotS
+bindsym $mod+Print exec $screenshotS -g
+bindsym XF86SelectiveScreenshot exec $screenshotS -g
+
+# Color picker
+bindsym ctrl+$mod+c exec $colorpickerS
+
+# Lock screen
+bindsym ctrl+$mod+$alt+l exec $lockS
+
+
+### Sway ###
+
 floating_modifier $mod normal
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+q kill
-bindsym $ctrl+$mod+$alt+Escape exec swaymsg exit
+bindsym ctrl+$mod+$alt+Escape exec swaymsg exit
 
 # Move your focus around
 bindsym $mod+$left focus left
 bindsym $mod+$down focus down
 bindsym $mod+$up focus up
 bindsym $mod+$right focus right
+
 # Or use $mod+[up|down|left|right]
 bindsym $mod+Left focus left
 bindsym $mod+Down focus downW
@@ -30,6 +90,7 @@ bindsym $mod+Shift+$left move left
 bindsym $mod+Shift+$down move down
 bindsym $mod+Shift+$up move up
 bindsym $mod+Shift+$right move right
+
 # Ditto, with arrow keys
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
@@ -47,6 +108,7 @@ bindsym $mod+7 workspace number 7
 bindsym $mod+8 workspace number 8
 bindsym $mod+9 workspace number 9
 bindsym $mod+0 workspace number 10
+
 # Move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number 1
 bindsym $mod+Shift+2 move container to workspace number 2
@@ -59,15 +121,14 @@ bindsym $mod+Shift+8 move container to workspace number 8
 bindsym $mod+Shift+9 move container to workspace number 9
 bindsym $mod+Shift+0 move container to workspace number 10
 
-# split
+# Split
 bindsym $mod+b splith
 bindsym $mod+v splitv
+# Layout styles
 
-# layout styles
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
-
 # Make the current focus fullscreen
 bindsym $mod+f fullscreen
 
@@ -102,45 +163,3 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 
-
-# adjust brightness via light
-bindsym --locked XF86MonBrightnessDown exec $brightnessdownS
-bindsym --locked XF86MonBrightnessUp exec $brightnessupS
-
-# adjust volume via PulseAudio
-bindsym --locked XF86AudioMute exec $volumemuteS
-bindsym --locked XF86AudioLowerVolume exec $volumedownS
-bindsym --locked XF86AudioRaiseVolume exec $volumeupS
-bindsym --locked XF86AudioMicMute exec $micmuteS
-
-# toggle wifi
-bindsym --locked XF86RFKill exec $togglewifiS
-
-#toggle touchpad
-bindsym XF86TouchpadToggle input type:touchpad events toggle enabled disabled
-
-# capslock 
-bindsym --release Caps_Lock exec swayosd-client --caps-lock
-
-# screenshot with grim
-bindsym Print exec $screenshotS
-bindsym $mod+Print exec $screenshotS -g
-bindsym XF86SelectiveScreenshot exec $screenshotS -g
-
-# color picker
-bindsym $ctrl+$mod+c exec $colorpickerS
-
-# lock screen
-bindsym $ctrl+$mod+$alt+l exec $lockS
-
-#power menu
-bindsym $ctrl+$alt+Delete exec $pmenuS
-
-# sleep
-bindsym $ctrl+$mod+$alt+s exec systemctl sleep
-# hibernate
-bindsym $ctrl+$mod+$alt+Shift+h exec systemctl hibernate
-# reboot
-bindsym $ctrl+$mod+$alt+Shift+r exec reboot
-# poweroff
-bindsym $ctrl+$mod+$alt+Shift+u exec poweroff

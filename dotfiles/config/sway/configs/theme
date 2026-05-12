@@ -1,6 +1,9 @@
-### theme
+#############
+### Theme ###
+#############
 
-# colors
+### Colors ###
+
 set $rosewater #f4dbd6
 set $flamingo #f0c6c6
 set $pink #f5bde6
@@ -28,7 +31,11 @@ set $base #24273a
 set $mantle #1e2030
 set $crust #181926
 
+# Set accent
 set $accent $blue
+
+
+### Set Colors ###
 
 #                               border          background      text         indicator     child_border
 client.focused                  $accent         $accent         $base        $accent       $accent
@@ -37,14 +44,18 @@ client.unfocused                $text           $base           $subtext1    $ba
 client.urgent                   $red            $red            $base        $red          $red
 client.placeholder              $textc5         $basec5         $subtext1    $base         $base
 
+
+### Decorations ###
+
 default_border pixel 2
 default_floating_border pixel 2
 titlebar_border_thickness 2
-
 gaps inner 8
 gaps top -8
 
-# specific apps window settings
+
+### Specific window settings ###
+
 for_window [app_id="imv"] floating enable
-for_window [app_id="xfce-pokit"] floating enable
+for_window [app_id="xfce-polkit"] floating enable
 for_window [app_id="zenity"] floating enable

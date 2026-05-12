@@ -1,55 +1,50 @@
-# Adovaz's config for sway
+##################################
+#### Adovaz's config for Sway ####
+##################################
 
-### Variables
+
+#################
+### Variables ###
+#################
 
 set $mod Mod4
 set $alt Mod1
-set $ctrl ctrl
 
 set $left h
 set $down j
 set $up k
 set $right l
 
-# terminal emulator
+### Applications
 set $term kitty
-# VSCode
-set $codium code
-# browser
+set $code code
 set $browser firefox
-# file manager
 set $filemgr thunar
 
-# scripts
-set $lockS swaylock
-set $screenshotS ~/.config/sway/scripts/screenshot.sh
-set $colorpickerS exec wl-color-picker
+### Scripts
+set $lockscreen swaylock
+set $screenshot ~/.config/sway/scripts/screenshot.sh
+set $colorpicker exec wl-color-picker
+set $drun ~/.config/sway/scripts/menu.sh drun
+set $run ~/.config/sway/scripts/menu.sh run
+set $pmenu ~/.config/rofi/launchers/pmenu.sh
+set $waybar waybar -c ~/.config/waybar/config.jsonc -s ~/.config/waybar/style.css
+set $mako mako -c ~/.config/mako/config
 
-set $drunS ~/.config/sway//scripts/menu.sh drun
-set $runS ~/.config/sway/scripts/menu.sh run
-set $pmenuS ~/.config/rofi/launchers/pmenu.sh
+set $brightnessdown exec swayosd-client --brightness lower
+set $brightnessup exec swayosd-client --brightness raise
+set $volumemute exec swayosd-client --output-volume mute-toggle
+set $volumedown exec swayosd-client --output-volume lower
+set $volumeup exec swayosd-client --output-volume raise  
+set $micmute ~/.config/sway/togglemic.sh
+set $togglewifi ~/.config/waybar/togglewifi.sh
 
-set $waybarS waybar -c ~/.config/waybar/config.jsonc -s ~/.config/waybar/style.css
-set $makoS mako -c ~/.config/mako/config
-
-set $brightnessdownS exec swayosd-client --brightness lower
-set $brightnessupS exec swayosd-client --brightness raise
-
-set $volumemuteS exec swayosd-client --output-volume mute-toggle
-set $volumedownS exec swayosd-client --output-volume lower
-set $volumeupS exec swayosd-client --output-volume raise  
-set $micmuteS ~/.config/sway/togglemic.sh
-
-set $togglewifiS ~/.config/waybar/togglewifi.shs
-
-# includes
+################
+### Includes ###
+################
 
 include ~/.config/sway/configs/input
-
 include ~/.config/sway/configs/output
-
 include ~/.config/sway/configs/startup
-
 include ~/.config/sway/configs/keybinds
-
 include ~/.config/sway/configs/theme

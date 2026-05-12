@@ -1,27 +1,29 @@
-# startup
+###############
+### Startup ###
+###############
 
-# waybar
-exec $waybarS
+# Waybar
+exec $waybar
 
-# notification
-exec $makoS
+# Notification
+exec $mako
 
-# restore saved brightness
+# Restore saved brightness
 exec light -I
 
-# swayOSD
+# SwayOSD
 exec swayosd-server
 
-# autotiling
+# Autotiling
 exec_always autotiling
 
-# polkit
+# Polkit
 exec /usr/lib/xfce-polkit/xfce-polkit
 
-# displays
+# Displays
 exec kanshi
 
-# idle
+# Idle
 exec swayidle -w \
         timeout 300 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
         timeout 600 'systemctl sleep' \

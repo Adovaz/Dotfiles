@@ -1,12 +1,14 @@
-### Inputs
+##############
+### Inputs ###
+##############
 
-#language
+### Language ###
 input * {
 	xkb_layout "mao"
 }
 
 
-# touchpad
+### Touchpad ###
 input "type:touchpad"
 {
     dwt enabled
@@ -14,6 +16,6 @@ input "type:touchpad"
     natural_scroll enabled
     middle_emulation enabled
 }
-
+# Gestures
 bindgesture swipe:right workspace prev
 bindgesture swipe:left workspace next
